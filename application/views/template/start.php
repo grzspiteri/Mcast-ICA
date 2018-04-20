@@ -1,116 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
+
     <meta charset="utf-8">
-    <title>ICA Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?=base_url('vendor/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link href="<?=base_url('vendor/bootstrap/css/styles.css')?>" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
   </head>
+
   <body>
-
-    <naV id="menu">
-        <ul>
-            <li>
-                About Us
+<!--about us Student portfolio Student links Contact Us
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="<?=site_url('home')?>">MCAST</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="MCAST">
+         Institute for the Creative Arts
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="<?=site_url('about')?>">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?=site_url('portfolio')?>">Portfolios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?=site_url('links')?>">Student Links</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?=site_url('contact')?>">Contact Us</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link"  href="<?=site_url('login')?>">Login</a>
             </li>
 
-            <li>
-                <a href="#">News & Events</a>
-            </li>
 
-            <li>
-                <a href="#">Regulations</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/inst/2">Full-Time Courses</a>
-            </li>
-
-            <li>
-                <a href="https://shortcourses.mcast.edu.mt/Institutes/InstituteInformation.aspx?id=E59BA0D5613C23756D0AABE3E07863D5">Part-Time Courses</a>
-            </li>
-
-            <li>
-                Student Portfolio
-            </li>
-
-            <li>
-                <a href="#">Interactive Media</a>
-            </li>
-
-            <li>
-                <a href="#">Graphics Design</a>
-            </li>
-
-            <li>
-                <a href="#">Game Art</a>
-            </li>
-
-            <li>
-                <a href="#">Media</a>
-            </li>
-
-            <li>
-                <a href="#">Photography</a>
-            </li>
-
-            <li>
-                <a href="#">Product Design</a>
-            </li>
-
-            <li>
-                <a href="#">Spatial Design</a>
-            </li>
-
-            <br>
-
-            <li>
-                <a href="#">Add a Portfolio</a>
-            </li>
-
-            <li>
-                Student Links
-            </li>
-
-            <li>
-                <a href="#">Cancelled Lectures & Notices</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/183">Handbook</a>
-            </li>
-
-            <li>
-                <a href="#">Useful Documents</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/searchOurCatalogue">Library</a>
-            </li>
-
-            <li>
-                <a href="https://www.schoology.com/">Schoology</a>
-            </li>
-
-            <li>
-                <a href="#">Timetable</a>
-            </li>
-
-            <li>
-                <a href="http://attendance.mcast.edu.mt/MyAttendance">Attendance</a>
-            </li>
-
-            <hr>
-
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-
-        </ul>
-    </naV>
-
-        <header id="title">
-            <h1>MCAST Institute for the Creative Arts</h1>
-        </header>
-
-        <main>
+          </ul>
+        </div>
+      </div>
+    </nav>

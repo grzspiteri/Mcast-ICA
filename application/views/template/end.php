@@ -1,66 +1,15 @@
-    <naV id="menu">
-        <ul>
-            <hr>
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+  </div>
+  <!-- /.container -->
+</footer>
 
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            <li>
-                About Us
-            </li>
+</body>
 
-            <li>
-                <a href="#">News & Events</a>
-            </li>
-
-            <li>
-                <a href="#">Regulations</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/inst/2">Full-Time Courses</a>
-            </li>
-
-            <li>
-                <a href="https://shortcourses.mcast.edu.mt/Institutes/InstituteInformation.aspx?id=E59BA0D5613C23756D0AABE3E07863D5">Part-Time Courses</a>
-            </li>
-
-            <li>
-                Student Links
-            </li>
-
-            <li>
-                <a href="#">Cancelled Lectures & Notices</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/183">Handbook</a>
-            </li>
-
-            <li>
-                <a href="#">Useful Documents</a>
-            </li>
-
-            <li>
-                <a href="http://www.mcast.edu.mt/searchOurCatalogue">Library</a>
-            </li>
-
-            <li>
-                <a href="https://www.schoology.com/">Schoology</a>
-            </li>
-
-            <li>
-                <a href="#">Timetable</a>
-            </li>
-
-            <li>
-                <a href="http://attendance.mcast.edu.mt/MyAttendance">Attendance</a>
-            </li>
-
-        </ul>
-    </naV>
-
-        </main>
-    </body>
 </html>
