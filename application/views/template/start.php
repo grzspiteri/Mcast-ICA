@@ -2,13 +2,13 @@
 <html lang="en">
 
   <head>
-
+    <link rel="icon" href="https://yt3.ggpht.com/a-/AJLlDp1DUo3zo87KCY-wYfZJ_nvKDPrETHSq0QGNcg=s900-mo-c-c0xffffffff-rj-k-no">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>MCAST - Institute for the Creative Arts</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?=base_url('vendor/bootstrap/css/bootstrap.min.css')?>" rel="stylesheet">
@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="<?=site_url('home')?>"><img src="http://ict.mcast.edu.mt/wp-content/uploads/Transparent.png" alt="MCAST" height="40px" width="180px"></a>
+        <a class="navbar-brand" href="<?=site_url('home')?>"><img src="<?=base_url('images/mcast.png')?>" alt="MCAST" height="40px" width="180px"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

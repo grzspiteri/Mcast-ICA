@@ -11,6 +11,8 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+    align-items: center;
+    align-content: center;
   }
 }
 
@@ -26,4 +28,10 @@ body {
 
 .portfolio-item {
   margin-bottom: 30px;
+}
+
+
+.row{
+  left: 20%;
+  padding-left: 18%;
 }
