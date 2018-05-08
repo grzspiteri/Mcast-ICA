@@ -52,10 +52,9 @@
             </li>
             <li class="nav-item">
               <div class="dropdown">
-
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Login
-                </a>
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </a>
 
                 <form class="dropdown-menu p-4">
                   <div class="form-group">
@@ -76,6 +75,7 @@
                 </form>
 
 
+</div>
           </div>
       </div>
               </div>
