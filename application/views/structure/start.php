@@ -39,13 +39,41 @@
               <a class="nav-link" href="<?=site_url('home')?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=site_url('about')?>">About Us</a>
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown">
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="<?=site_url('News')?>">News and Events</a>
+                  <a class="dropdown-item" href="<?=site_url('Regulations')?>">Regulations</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=site_url('portfolio')?>">Portfolios</a>
+              <a class="nav-link" href="<?=site_url('interactive')?>">Portfolios</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=site_url('links')?>">Student Links</a>
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Student Links
+              </a>
+              <div class="dropdown">
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="<?=site_url('Notices')?>">Cancelled Lectures and Notices</a>
+                  <a class="dropdown-item" href="http://mcast.edu.mt:8223/rfm/source/Documents/handbooks/MCAST%20Handbook%202017%20-%20TECHNICAL_ONLINE.pdf">Handbook</a>
+                  <a class="dropdown-item" href="http://www.mcast.edu.mt:8223/MainMenu/Library.aspx">Library</a>
+                  <a class="dropdown-item" href="https://www.schoology.com/">Schoology</a>
+                  <a class="dropdown-item" href="<?=site_url('Timetable')?>">Timetable</a>
+                  <a class="dropdown-item" href="http://attendance.mcast.edu.mt/">Attendance</a>
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Useful Documents
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://www.facebook.com/">SOI Form</a>
+                    <a class="dropdown-item" href="<?=site_url('Notices')?>">Extension Form</a>
+                    <a class="dropdown-item" href="<?=site_url('Notices')?>">Excused Form</a>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?=site_url('contact')?>">Contact Us</a>

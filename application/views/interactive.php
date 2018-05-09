@@ -2,15 +2,36 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Portfolio 1
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">
+        Student's Portfolios - Interactive Media
       </h1>
 
       <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('interactive')?>">Interactive Media</a>
         </li>
-        <li class="breadcrumb-item active">Portfolio 1</li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('graphics')?>">Graphic Design</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('gameart')?>">Game Art</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('media')?>">Media</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('photography')?>">Photography</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('Product')?>">Product Design</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('Spatial')?>">Spatial Design</a>
+        </li>
+        <li class="breadcrumb-item active">
+          <a href="<?=site_url('AddPortofolio')?>">Add Portofolio</a>
+        </li>
+
       </ol>
 
       <!-- Project One -->
@@ -21,9 +42,9 @@
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project One</h3>
+          <h3>Portfolio One</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-          <a class="btn btn-primary" href="#">View Project
+          <a class="btn btn-primary" href="#">View Portfolio
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -40,9 +61,9 @@
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project Two</h3>
+          <h3>Portfolio Two</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">View Project
+          <a class="btn btn-primary" href="#">View Portfolio
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -59,9 +80,9 @@
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project Three</h3>
+          <h3>Portfolio Three</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project
+          <a class="btn btn-primary" href="#">View Portfolio
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -79,9 +100,9 @@
           </a>
         </div>
         <div class="col-md-5">
-          <h3>Project Four</h3>
+          <h3>Portfolio Four</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">View Project
+          <a class="btn btn-primary" href="#">View Portfolio
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -90,30 +111,9 @@
 
       <hr>
 
-      <!-- Pagination -->
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">1</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
+
+    </div>
+
 
     </div>
     <!-- /.container -->

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class GameArt extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,11 +21,11 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('structure/start');
-		$this->load->view('login');
+		$this->load->view('GameArt');
 		$this->load->view('structure/end');
 	}
 
-	public function view($user)
+	public function view($course)
 	{
 
 	}
