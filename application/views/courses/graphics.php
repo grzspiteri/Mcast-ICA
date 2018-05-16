@@ -3,7 +3,7 @@
 
   <!-- Page Heading/Breadcrumbs -->
   <h1 class="mt-4 mb-3">
-    Student's Portfolios - Photography
+    Student's Portfolios - <?=$name?>
   </h1>
 
   <ol class="breadcrumb">
@@ -23,10 +23,10 @@
       <a href="<?=site_url('photography')?>">Photography</a>
     </li>
     <li class="breadcrumb-item active">
-      <a href="<?=site_url('Product')?>">Product Design</a>
+      <a href="<?=site_url('product')?>">Product Design</a>
     </li>
     <li class="breadcrumb-item active">
-      <a href="<?=site_url('Spatial')?>">Spatial Design</a>
+      <a href="<?=site_url('spatial')?>">Spatial Design</a>
     </li>
     <li class="breadcrumb-item active">
       <a href="<?=site_url('AddPortofolio')?>">Add Portofolio</a>

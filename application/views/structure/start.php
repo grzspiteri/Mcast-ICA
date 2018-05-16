@@ -50,7 +50,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=site_url('interactive')?>">Portfolios</a>
+              <a class="nav-link" href="<?=site_url('Course')?>">Portfolios</a>
             </li>
             <li class="nav-item">
               <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,8 +83,7 @@
               <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Login
               </a>
-
-                <form class="dropdown-menu p-4">
+              <?=form_open('login', array('class' => 'dropdown-menu p-4'));?>
                   <div class="form-group">
                     <label for="exampleDropdownFormEmail2">Email address</label>
                     <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
@@ -100,7 +99,7 @@
                     </label>
                   </div>
                   <button type="submit" class="btn btn-primary">Sign in</button>
-                </form>
+                <?=form_close();?>
 
 
 </div>

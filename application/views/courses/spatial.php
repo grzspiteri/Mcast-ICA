@@ -23,10 +23,10 @@
           <a href="<?=site_url('photography')?>">Photography</a>
         </li>
         <li class="breadcrumb-item active">
-          <a href="<?=site_url('Product')?>">Product Design</a>
+          <a href="<?=site_url('product')?>">Product Design</a>
         </li>
         <li class="breadcrumb-item active">
-          <a href="<?=site_url('Spatial')?>">Spatial Design</a>
+          <a href="<?=site_url('spatial')?>">Spatial Design</a>
         </li>
         <li class="breadcrumb-item active">
           <a href="<?=site_url('AddPortofolio')?>">Add Portofolio</a>

@@ -21,7 +21,7 @@ class AddPortofolio extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('structure/start');
-		$this->load->view('AddPortofolio');
+		$this->load->view('courses/AddPortofolio');
 		$this->load->view('structure/end');
 	}
 

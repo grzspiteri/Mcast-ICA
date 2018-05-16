@@ -52,3 +52,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['interactive'] = 'course/show/interactive media';
+$route['graphics'] = 'course/show/graphic design';
+$route['gameart'] = 'course/show/game art';
+$route['media'] = 'course/show/media';
+$route['photography'] = 'course/show/photography';
+$route['spatial'] = 'course/show/spatial design';
+$route['product'] = 'course/show/product design';
+
+$route['login'] = 'News';
