@@ -1,5 +1,7 @@
     <!-- Page Content -->
     <div class="container">
+      <br>
+      <br>
 
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">Regulations
@@ -17,6 +19,7 @@
           </div>
       </div>
       <!-- /.row -->
-
+      <br>
+      <br>
     </div>
     <!-- /.container -->

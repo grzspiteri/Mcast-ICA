@@ -89,7 +89,7 @@ class System extends MY_Controller {
         $this->session->set_userdata($data);
 
         # 10. Redirect home
-        redirect('aboutus');
+        redirect('#');
 
     }
 

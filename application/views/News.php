@@ -1,6 +1,7 @@
     <!-- Page Content -->
     <div class="container">
-
+      <br>
+      <br>
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3">News
       </h1>
@@ -21,6 +22,8 @@
       <!-- /.row -->
       <br>
       <hr>
+      <br>
+      <brd>
       <!-- Team Members -->
       <h2>Events</h2>
 
@@ -42,6 +45,8 @@
         </div>
       </div>
       <!-- /.row -->
+      <br>
+      <br>
 
     </div>
     <!-- /.container -->
