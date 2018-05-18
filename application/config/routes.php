@@ -61,4 +61,4 @@ $route['photography'] = 'course/show/photography';
 $route['spatial'] = 'course/show/spatial design';
 $route['product'] = 'course/show/product design';
 
-$route['login'] = 'News';
+$route['login/submit'] = 'system/login_submit';

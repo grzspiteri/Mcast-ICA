@@ -8,9 +8,8 @@ class System_Model extends CI_Model {
     {
 
         $data = array(
-            'u_email'       => $email,
-            'u_password'    => password_hash($salt.$password, CRYPT_BLOWFISH),
-            'u_salt'        => strrev($salt)
+            'user_email'       => $email,
+            'user_password'    => password_hash($salt.$password, CRYPT_BLOWFISH),
         );
 
         $this->db->insert('tbl_users', $data);
@@ -26,8 +25,8 @@ class System_Model extends CI_Model {
 
         $data = array(
             'user_id'       => $id,
-            'u_name'        => $name,
-            'u_surname'     => $surname
+            'user_name'        => $name,
+            'user_surname'     => $surname
         );
 
         return $this->db->get_where('tbl_user_details', $data)->num_rows() == 1;
@@ -51,9 +50,9 @@ class System_Model extends CI_Model {
 
         $data = array(
             'user_id'       => $id,
-            'u_name'        => $name,
-            'u_surname'     => $surname,
-            'u_creation'    => time()
+            'user_name'        => $name,
+            'user_surname'     => $surname,
+            'user_creation'    => time()
         );
 
         $this->db->insert('tbl_user_details', $data);
