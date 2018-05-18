@@ -26,7 +26,7 @@
               <div class="card-body">
                 <h2 class="card-title">Latest News</h2>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                <a href="news" class="btn btn-primary">Read More &rarr;</a>
+                <a href="<?=site_url('news')?>" class="btn btn-primary">Read More &rarr;</a>
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
                 <div class="card-body">
                   <h2 class="card-title">Events</h2>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                  <a href="news" class="btn btn-primary">Read More &rarr;</a>
+                  <a href="<?=site_url('news')?>" class="btn btn-primary">Read More &rarr;</a>
                 </div>
               </div>
             </div>

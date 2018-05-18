@@ -68,9 +68,9 @@
                     Useful Documents
                   </button>
                   <div class="dropdown-menu">
-                    <a class="dropdown-item" href="http://www.facebook.com/">SOI Form</a>
-                    <a class="dropdown-item" href="<?=site_url('Notices')?>">Extension Form</a>
-                    <a class="dropdown-item" href="<?=site_url('Notices')?>">Excused Form</a>
+                    <a class="dropdown-item" href="#">SOI Form</a>
+                    <a class="dropdown-item" href="#">Extension Form</a>
+                    <a class="dropdown-item" href="#">Excused Form</a>
                   </div>
                 </div>
               </div>

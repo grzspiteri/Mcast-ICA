@@ -1,9 +1,6 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
 
-
-
-
   <div class="container">
     <div class="card-deck">
 
@@ -39,11 +36,11 @@
         <div class="card-body">
           <h5 class="card-title">SOI Links</h5>
             <hr>
-            <a class="card-title" href="http://www.facebook.com/">SOI Form</a>
+            <a class="card-title" href="#">SOI Form</a>
             <hr>
-            <a class="card-title" href="<?=site_url('Notices')?>">Extension Form</a>
+            <a class="card-title" href="#">Extension Form</a>
             <hr>
-            <a class="card-title" href="<?=site_url('Notices')?>">Excused Form</a>
+            <a class="card-title" href="#">Excused Form</a>
           </div>
         </div>
       </div>
