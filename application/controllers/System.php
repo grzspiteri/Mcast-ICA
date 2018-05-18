@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class System extends MY_Controller {
+class System extends CI_Controller {
 
     # The constructor class
     function __construct()
@@ -11,45 +11,11 @@ class System extends MY_Controller {
         $this->load->library(array('form_validation' => 'fv'));
     }
 
-    public function login()
-      {
-
-          $data = array(
-              'page_title'    => 'Login',
-              'form_action'   => 'login/submit',
-              'form'          => array(
-                  'Email'         => array(
-                      'type'          => 'email',
-                      'placeholder'   => 'me@example.com',
-                      'name'          => 'email',
-                      'id'            => 'input-email'
-                  ),
-                  'Password'      => array(
-                      'type'          => 'password',
-                      'placeholder'   => 'password',
-                      'name'          => 'password',
-                      'id'            => 'input-password'
-                  )
-              ),
-              'buttons'       => array(
-                  'submit'        => array(
-                      'type'          => 'submit',
-                      'content'       => 'Log In'
-                  )
-              )
-          );
-
-          $this->load->view('structure/start', $data);
-
-      }
-
-
-
     # The Login Submission page
     public function login_submit()
     {
         # 1. Check the form for validation errors
-        if ($this->fv->run('login') === FALSE)
+        if ($this->fv->run('login/submit') === FALSE)
         {
             echo validation_errors();
             return;
