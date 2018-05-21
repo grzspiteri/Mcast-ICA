@@ -61,7 +61,6 @@ class System extends CI_Controller {
 
     }
 
-
     # The logout page
     public function logout()
     {

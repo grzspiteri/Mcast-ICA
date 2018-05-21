@@ -85,12 +85,12 @@
               </a>
               <?=form_open('login/submit', array('class' => 'dropdown-menu p-4'));?>
                   <div class="form-group">
-                    <label for="exampleDropdownFormEmail2">Email address</label>
-                    <input name="email" type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@email.com">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="email@email.com">
                   </div>
                   <div class="form-group">
-                    <label for="exampleDropdownFormPassword2">Password</label>
-                    <input name="password" type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Password">
                   </div>
                   <button type="submit" class="btn btn-primary">Sign in</button>
               <?=form_close();?>

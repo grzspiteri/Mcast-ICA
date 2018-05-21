@@ -3,14 +3,14 @@
 
       <div class="row">
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3 col-12">Home </h1>
+        <h1 class="mt-4 mb-3 col-12"></h1>
       </div>
 
 
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-12">
           <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+            <img class="img-fluid rounded mb-3 mb-md-0" src="<?=base_url('images/Home Page.jpg')?>" alt="">
           </a>
         </div>
       </div>
@@ -22,7 +22,7 @@
         <div class="col-md-6">
           <!-- Blog Post -->
             <div class="card mb-4">
-              <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+              <img class="card-img-top" src="<?=base_url('images/news.png')?>" alt="Card image cap">
               <div class="card-body">
                 <h2 class="card-title">Latest News</h2>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
@@ -32,8 +32,9 @@
           </div>
           <div class="col-md-6">
               <div class="card mb-4">
-                <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                <img class="card-img-top" src="<?=base_url('images/events.jpg')?>" alt="Card image cap">
                 <div class="card-body">
+                  <br>
                   <h2 class="card-title">Events</h2>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
                   <a href="<?=site_url('news')?>" class="btn btn-primary">Read More &rarr;</a>
