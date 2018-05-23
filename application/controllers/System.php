@@ -15,7 +15,7 @@ class System extends CI_Controller {
     public function login_submit()
     {
         # 1. Check the form for validation errors
-        if ($this->fv->run('login/submit') === FALSE)
+        if ($this->fv->run('login') === FALSE)
         {
             echo validation_errors();
             return;
@@ -27,7 +27,7 @@ class System extends CI_Controller {
 
         # 3. Use the System model to verify the password
         # This avoids exposing information (sry h4xx0rs lol)
-        $check = $this->system->check_password($email, $password);
+        $check = $this->system->check_password($user_email, $user_password);
 
         # 4. If check came back as FALSE, the password is wrong
         if ($check === FALSE)
