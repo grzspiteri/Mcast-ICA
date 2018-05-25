@@ -6,6 +6,8 @@
       <h1 class="mt-4 mb-3">Contact Us
       </h1>
 
+      <p class="success"><?php echo $flash; ?></p>
+
       <!-- Content Row -->
       <div class="row">
 
@@ -13,7 +15,7 @@
           <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
           <div class="row">
             <div class="col-lg-8 mb-4">
-              <form action="" method="post" name="sentMessage" id="contactForm" novalidate>
+              <form action="<?php echo base_url('index.php/contact');?>" method="post" name="sentMessage" id="contactForm" novalidate>
                 <div class="control-group form-group">
                   <div class="controls">
                     <label>Name:</label>

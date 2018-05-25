@@ -18,4 +18,6 @@ class Course extends CI_Controller {
 		$this->load->view('courses/photography', $data);
 		$this->load->view('structure/end');
 	}
+
+
 }

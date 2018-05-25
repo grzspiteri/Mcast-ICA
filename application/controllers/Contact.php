@@ -20,13 +20,37 @@ class Contact extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('structure/start');
-		$this->load->view('contact');
-		$this->load->view('structure/end');
+		$data['title'] = 'contact us';
+		$this->load->library('session');
+		$data['flash'] = $this->session->flashdata('success');
+
+		$this->load->view('structure/start', $data);
+		$this->load->view('contact', $data);
+		$this->load->view('structure/end', $data);
 	}
 
-	public function view($course)
+	public function sendemail()
 	{
+		$this->load->library('email');
+		$this->load->library('session');
+
+		$this->email->from($this->input->post('email'), $this->input->post('first_name'), $this->input->post('last_name'));
+		$this->email->to('grzspiteri@live.com');
+
+		$this->email->subject($this->input->post('title'));
+		$this->email->message($this->input->post('message'));
+
+		if($this->email->send()){
+			echo "yaaaaasssss"; die;
+			$this->session->set_flashdata('success','Thanks fot the email');
+			redirect('home');
+		}
+
+		else {
+			// code...
+			echo 'didnt work';
+		}
 
 	}
+
 }

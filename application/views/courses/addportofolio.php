@@ -1,32 +1,3 @@
-<?php
-  // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "db_users");
-
-  // Initialize message variable
-  $msg = "";
-
-  // If upload button is clicked ...
-  if (isset($_POST['upload'])) {
-  	// Get image name
-  	$image = $_FILES['image']['name'];
-  	// Get text
-  	$image_title = mysqli_real_escape_string($db, $_POST['image_title']);
-
-  	// image file directory
-  	$target = "images/".basename($image);
-
-  	$sql = "INSERT INTO images (image, image_title) VALUES ('$image', '$image_title')";
-  	// execute query
-  	mysqli_query($db, $sql);
-
-  	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-  		$msg = "Image uploaded successfully";
-  	}else{
-  		$msg = "Failed to upload image";
-  	}
-  }
-  $result = mysqli_query($db, "SELECT * FROM images");
-?>
 
 <!-- Page Content -->
 <div class="container">
@@ -42,7 +13,8 @@
   <!-- Project One -->
   <div class="row">
     <div class="col-md-7">
-      <form name="sentMessage" id="contactForm" novalidate>
+      <?php echo form_open_multipart('upload/do_upload');?>
+
               <div class="control-group form-group">
           <div class="controls">
             <label>Title:</label>
@@ -65,9 +37,9 @@
 
         <div id="success"></div>
         <!-- For success/fail messages -->
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <input type="file" name="user-file" size="20" class="form-control-file" id="exampleFormControlFile1">
         <hr>
-        <button type="submit" name="upload" class="btn btn-primary" id="image">Send</button>
+        <button type="submit" value="upload" name="upload" class="btn btn-primary" id="image">Send</button>
       </form>
     </div>
   </div>

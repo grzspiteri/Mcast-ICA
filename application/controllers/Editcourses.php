@@ -37,6 +37,20 @@ class Editcourses extends CI_Controller {
 		$this->load->view('structure/end');
 	}
 
+	public function edit($id = NULL)
+	{
+		//dawk li amilna fil klassi --->
+	}
+
+	public function edit_submit()
+	{
+		//dawk li amilna fil klassi --->
+		if($_FILES['userfile']['name'] != '')
+		{
+			$this->do_upload('userfile');
+		}
+	}
+
 	public function view($course)
 	{
 

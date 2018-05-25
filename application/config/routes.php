@@ -62,3 +62,4 @@ $route['spatial'] = 'course/show/spatial design';
 $route['product'] = 'course/show/product design';
 
 $route['login/submit'] = 'system/login_submit';
+$route['(:any)'] = 'profile/user/$1';

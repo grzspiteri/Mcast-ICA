@@ -25,8 +25,8 @@ class AddPortofolio extends CI_Controller {
 		$this->load->view('structure/end');
 	}
 
-	public function view($course)
+	public function submit()
 	{
-
+		echo "form submitted"; //iccekja l file
 	}
 }
