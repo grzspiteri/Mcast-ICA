@@ -10,6 +10,7 @@ class System_Model extends CI_Model {
         $data = array(
             'user_email'       => $email,
             'user_password'    => password_hash($salt.$password, CRYPT_BLOWFISH),
+            'user_salt'        => strrev($salt)
         );
 
         $this->db->insert('tbl_users', $data);
@@ -24,7 +25,7 @@ class System_Model extends CI_Model {
     {
 
         $data = array(
-            'user_id'       => $id,
+            'tbl_users_user_id'       => $id,
             'user_name'        => $name,
             'user_surname'     => $surname
         );
@@ -36,7 +37,7 @@ class System_Model extends CI_Model {
     # Deletes a user from the database
     public function delete_user($id)
     {
-        $this->db->delete('tbl_users', array('id' => $id));
+        $this->db->delete('tbl_users', array('user_id' => $id));
     }
 
 
@@ -49,7 +50,7 @@ class System_Model extends CI_Model {
         }
 
         $data = array(
-            'user_id'       => $id,
+            'tbl_users_user_id'       => $id,
             'user_name'        => $name,
             'user_surname'     => $surname,
             'user_creation'    => time()
@@ -69,7 +70,7 @@ class System_Model extends CI_Model {
                         ->get('tbl_users')
                         ->row_array();
 
-        return password_verify($checkstr, $info['user_password']) ? $info['user_id'] : FALSE;
+        return password_verify($password, $info['user_password']) ? $info['user_id'] : FALSE;
     }
 
 
@@ -86,9 +87,9 @@ class System_Model extends CI_Model {
                                 tbl_roles.role_name AS role,
                                 tbl_users.user_email AS email,
                                 tbl_login_info.user_persistence AS session_code')
-                        ->join('tbl_login_info', 'tbl_login_info.user_id = tbl_users.id', 'left')
-                        ->join('tbl_roles', 'tbl_roles.role_id = tbl_users.role_id', 'left')
-                        ->where('tbl_users.id', $id)
+                        ->join('tbl_login_info', 'tbl_login_info.tbl_users_user_id = tbl_users.user_id', 'left')
+                        ->join('tbl_roles', 'tbl_roles.role_id = tbl_users.tbl_roles_role_id', 'left')
+                        ->where('tbl_users.user_id', $id)
                         ->get('tbl_users')
                         ->row_array();
     }
@@ -98,7 +99,7 @@ class System_Model extends CI_Model {
     public function persist($id, $code)
     {
         $data = array(
-            'user_id'       => $id,
+            'tbl_users_user_id'       => $id,
             'user_login_time'  => time(),
             'user_persistence' => $code
         );
@@ -127,7 +128,7 @@ class System_Model extends CI_Model {
     public function delete_session($id, $code)
     {
         $data = array(
-            'user_id'       => $id,
+            'tbl_users_user_id'       => $id,
             'user_persistence' => $code
         );
 

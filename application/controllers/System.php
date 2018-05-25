@@ -22,12 +22,12 @@ class System extends CI_Controller {
         }
 
         # 2. Retrieve the data for checking
-        $user_email      = $this->input->post('email');
-        $user_password   = $this->input->post('password');
+        $email      = $this->input->post('user_email');
+        $password   = $this->input->post('user_password');
 
         # 3. Use the System model to verify the password
         # This avoids exposing information (sry h4xx0rs lol)
-        $check = $this->system->check_password($user_email, $user_password);
+        $check = $this->system->check_password($email, $password);
 
         # 4. If check came back as FALSE, the password is wrong
         if ($check === FALSE)
@@ -57,7 +57,7 @@ class System extends CI_Controller {
         $this->session->set_userdata($data);
 
         # 10. Redirect home
-        redirect('#');
+        redirect('/');
 
     }
 
@@ -66,7 +66,7 @@ class System extends CI_Controller {
     {
         # 1. Remove the login data from the database
         $data = $this->session->userdata;
-        $this->system->delete_session($data['id'], $data['session_code']);
+        $this->system->delete_session($data['user_id'], $data['session_code']);
 
         # 2. Remove the information from the session.
         $this->session->unset_userdata(array(
@@ -134,15 +134,15 @@ class System extends CI_Controller {
         }
 
         # 2. Retrieve the first set of data
-        $user_email      = $this->input->post('email');
-        $user_password   = $this->input->post('password');
+        $email      = $this->input->post('user_email');
+        $password   = $this->input->post('user_password');
 
         # 3. Generate a random keyword for added protection
         # Since the encrypted key is in binary, we should change it to a hex string (0-9, a-f)
         $salt       = bin2hex($this->encryption->create_key(8));
 
         # 3. Add them to the database, and retrieve the ID
-        $id = $this->system->add_user($usr_email, $user_password, $salt);
+        $id = $this->system->add_user($email, $password, $salt);
 
         # 4. If the ID didn't register, we can't continue.
         if ($id === FALSE)
@@ -152,11 +152,11 @@ class System extends CI_Controller {
         }
 
         # 5. Retrieve the next data
-        $user_name       = $this->input->post('name');
-        $user_surname    = $this->input->post('surname');
+        $name       = $this->input->post('user_name');
+        $surname    = $this->input->post('user_surname');
 
         # 6. Add the details to the next table
-        $check = $this->system->user_details($user_id, $user_name, $user_surname);
+        $check = $this->system->user_details($id, $name, $surname);
 
         # 7. If the query failed, delete the user to avoid partial data.
         if ($check === FALSE)
