@@ -35,7 +35,7 @@ $config['base_url'] = 'http://icamcast.local/Mcast-ICA/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
