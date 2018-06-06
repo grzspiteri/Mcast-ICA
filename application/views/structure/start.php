@@ -93,6 +93,8 @@
                     <input name="password" type="password" class="form-control" id="password" placeholder="Password">
                   </div>
                   <button type="submit" class="btn btn-primary">Sign in</button>
+                  <div class="dropdown-divider"></div>
+                  <?=anchor('register', 'Register a new account');?>
               <?=form_close();?>
 
 
