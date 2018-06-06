@@ -1,7 +1,9 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteRule ^$ index.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond $1 !^(index\.php|css|images)
-RewriteRule ^(.*)$ \/Mcast\-ICA\/index.php\/$1 [L]
+RewriteCond $1 !^(index\.php|css|images|vendor|upload)
+RewriteRule ^(.*)$ index.php\/$1 [L]
+RewriteRule "http\:\/\/icamcast\.local\/" [R=301,L]
