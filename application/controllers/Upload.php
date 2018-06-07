@@ -21,7 +21,7 @@ class Upload extends CI_Controller {
 
         public function do_upload($name)
         {
-          $images = glob("upload/{$name}.*");
+          $images = glob("uploads/{$name}.*");
 
           if (count($images) > 0)
           {
