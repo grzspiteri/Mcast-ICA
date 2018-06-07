@@ -4,6 +4,6 @@ RewriteBase /
 RewriteRule ^$ index.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond $1 !^(index\.php|css|images|vendor|upload)
+RewriteCond $1 !^(index\.php|css|images|vendor|uploads)
 RewriteRule ^(.*)$ index.php\/$1 [L]
 RewriteRule "http\:\/\/icamcast\.local\/" [R=301,L]
