@@ -61,5 +61,12 @@ $route['photography'] = 'course/show/photography';
 $route['spatial'] = 'course/show/spatial design';
 $route['product'] = 'course/show/product design';
 
+$route['register'] = 'system/register';
+$route['register/submit'] = 'system/register_submit';
+
+$route['login'] = 'system/login';
 $route['login/submit'] = 'system/login_submit';
+
+$route['logout'] = 'system/logout';
+
 $route['user/(:any)'] = 'profile/user/$1';

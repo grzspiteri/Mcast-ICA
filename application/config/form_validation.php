@@ -30,9 +30,14 @@ $config = array(
             'rules' => 'required'
         ),
         array(
+            'field' => 'role',
+            'label' => 'Role',
+            'rules' => 'required'
+        ),
+        array(
             'field' => 'email',
             'label' => 'Email',
-            'rules' => 'required|valid_email|is_unique[tbl_users.u_email]'
+            'rules' => 'required|valid_email|is_unique[tbl_users.user_email]'
         ),
         array(
             'field' => 'password',

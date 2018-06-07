@@ -95,7 +95,10 @@
                   <button type="submit" class="btn btn-primary">Sign in</button>
                   <div class="dropdown-divider"></div>
                   <?=anchor('register', 'Register a new account');?>
+                  <div class="dropdown-divider"></div>
+                  <?=anchor('logout', 'Log Out');?>
               <?=form_close();?>
+
 
 
 </div>

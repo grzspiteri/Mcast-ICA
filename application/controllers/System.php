@@ -22,11 +22,11 @@ class System extends CI_Controller {
         }
 
         # 2. Retrieve the data for checking
-        $email      = $this->input->post('user_email');
-        $password   = $this->input->post('user_password');
+        $email      = $this->input->post('email');
+        $password   = $this->input->post('password');
 
         # 3. Use the System model to verify the password
-        # This avoids exposing information (sry h4xx0rs lol)
+        # This avoids exposing information
         $check = $this->system->check_password($email, $password);
 
         # 4. If check came back as FALSE, the password is wrong
@@ -70,7 +70,7 @@ class System extends CI_Controller {
 
         # 2. Remove the information from the session.
         $this->session->unset_userdata(array(
-            'id', 'email', 'name', 'surname', 'session_code'
+            'user_id', 'user_email', 'user_name', 'user_surname', 'session_code'
         ));
 
         # 3. Take the user home
@@ -98,6 +98,12 @@ class System extends CI_Controller {
                     'name'          => 'surname',
                     'id'            => 'input-surname'
                 ),
+                'Role'      => array(
+                    'type'          => 'text',
+                    'placeholder'   => 'Student/Lecturer',
+                    'name'          => 'role',
+                    'id'            => 'input-role'
+                ),
                 'Email'         => array(
                     'type'          => 'email',
                     'placeholder'   => 'me@example.com',
@@ -114,12 +120,13 @@ class System extends CI_Controller {
             'buttons'       => array(
                 'submit'        => array(
                     'type'          => 'submit',
-                    'content'       => 'Log In'
+                    'content'       => 'Register'
                 )
             )
         );
-
+        $this->load->view('structure/start');
         $this->load->view('system/form', $data);
+        $this->load->view('structure/end');
 	}
 
 
@@ -134,12 +141,13 @@ class System extends CI_Controller {
         }
 
         # 2. Retrieve the first set of data
-        $email      = $this->input->post('user_email');
-        $password   = $this->input->post('user_password');
+        $email      = $this->input->post('email');
+        $password   = $this->input->post('password');
 
         # 3. Generate a random keyword for added protection
         # Since the encrypted key is in binary, we should change it to a hex string (0-9, a-f)
         $salt       = bin2hex($this->encryption->create_key(8));
+
 
         # 3. Add them to the database, and retrieve the ID
         $id = $this->system->add_user($email, $password, $salt);
@@ -152,11 +160,12 @@ class System extends CI_Controller {
         }
 
         # 5. Retrieve the next data
-        $name       = $this->input->post('user_name');
-        $surname    = $this->input->post('user_surname');
+        $name       = $this->input->post('name');
+        $surname    = $this->input->post('surname');
+        $role       = $this->input->post('role');
 
         # 6. Add the details to the next table
-        $check = $this->system->user_details($id, $name, $surname);
+        $check = $this->system->user_details($id, $name, $surname, $role);
 
         # 7. If the query failed, delete the user to avoid partial data.
         if ($check === FALSE)

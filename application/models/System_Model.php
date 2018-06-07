@@ -65,12 +65,14 @@ class System_Model extends CI_Model {
     # Checks the password provided by the user
     public function check_password($email, $password)
     {
-        $info = $this->db->select('user_id, user_password')
+        $info = $this->db->select('user_id, user_password, user_salt')
                         ->where('user_email', $email)
                         ->get('tbl_users')
                         ->row_array();
 
-        return password_verify($password, $info['user_password']) ? $info['user_id'] : FALSE;
+        $checkstr = strrev($info['user_salt']).$password;
+
+        return password_verify($checkstr, $info['user_password']) ? $info['user_id'] : FALSE;
     }
 
 
